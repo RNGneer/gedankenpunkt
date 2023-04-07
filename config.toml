@@ -1,0 +1,8 @@
+baseURL = 'https://mfreimueller.com/'
+languageCode = 'en-us'
+title = 'Michael Freimüller'
+Copyright = ' Copyright 2023 Michael Freimüller Released under Creative Commons Attribution 3.0 Unported license'
+
+[Params]
+author = 'Michael Freimüller'
+ShowThemeInfo = true

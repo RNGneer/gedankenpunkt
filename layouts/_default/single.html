@@ -1,0 +1,17 @@
+{{ define "main" -}}
+<section class="front-block">
+	<div class="toc-block">
+		<h1 class="nocount">{{ .Title }}</h1>
+		<aside class="toc">{{ .TableOfContents }}</aside>
+	</div>
+</section>
+<section class="content">
+	{{ .Content -}}
+</section>
+{{- if .Params.filename -}}
+<section>
+	<p><a href="/pdf/{{ .Params.filename }}" target="_blank">Download this essay</a></p>
+</section>
+{{- end -}}
+
+{{ end -}}

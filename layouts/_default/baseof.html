@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    {{ partial "html-meta.html" . -}}
+    <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    {{ with .Site.Params.favicon -}}
+    <link rel="icon" href="{{ . }}" type="image/x-icon" />
+    {{ end -}}
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+</head>
+
+<body>
+    <header>
+        <h1>Michael Freimüller's personal homepage</h1>
+        <h2>
+            <a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
+        </h2>
+        {{ if and (ne .Kind "home") (ne .Kind "section" ) }}
+        <p>
+            For more essays, see the <a href="/essays">list of essays</a>.
+        </p>
+        {{ end }}
+        <p>
+            <a href="/bio">Michael Freimüller's Bio</a>
+        </p>
+    </header>
+    <hr>
+    <main>
+        <article>
+            {{ block "main" . }}{{- end }}
+        </article>
+    </main>
+    <footer>
+        {{- if .Site.Copyright -}}
+        <p>{{ .Site.Copyright | markdownify }}</p>
+        {{- end -}}
+        {{- if .Site.Params.ShowThemeInfo -}}
+        <p>Powered by <a href="https://gohugo.io/">Hugo</a></p>
+        {{- end -}}
+    </footer>
+    {{ template "_internal/google_analytics_async.html" . -}}
+</body>
+
+</html>
