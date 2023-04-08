@@ -1,20 +1,15 @@
 {{ define "main" -}}
-<div>
+<section>
   <h1>{{ .Title }}</h1>
-</div>
-<div>
+</section>
+<section>
   {{ .Content -}}
-</div>
-<ul>
-  {{ range .Paginator.Pages -}}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{ with .Description }}: {{ . }}{{ end }}
-    {{ with .Date }}
-    <span class="pubdate"> - {{ .Format "2006-01-02 15:04" }}</span>
-    {{ end }}
-  </li>
-  {{ end -}}
-</ul>
-</main>
+</section>
+<section>
+  <ul class="article-list">
+    {{ range .Paginator.Pages -}}
+    {{ partial "list-item" . }}
+    {{ end -}}
+  </ul>
+</section>
 {{ end }}

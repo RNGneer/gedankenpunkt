@@ -1,17 +1,46 @@
 {{ define "main" -}}
-<section class="front-block">
-	<div class="toc-block">
-		<h1 class="nocount">{{ .Title }}</h1>
-		<aside class="toc">{{ .TableOfContents }}</aside>
+<div id="progress-bar"></div>
+<section>
+	<div>
+		<h1>{{ .Title }}</h1>
+		{{- if not .Params.internal -}}
+		<p class="info">
+			<span>{{ .PublishDate.Format "January 2, 2006" }} by Michael Freimüller</span>
+			{{- if .Params.filename -}}
+			<span>
+				<a href="/pdf/{{ .Params.filename }}" target="_blank">Download PDF</a>
+			</span>
+			{{- end -}}
+		</p>
+		{{- end -}}
 	</div>
 </section>
 <section class="content">
 	{{ .Content -}}
 </section>
-{{- if .Params.filename -}}
-<section>
-	<p><a href="/pdf/{{ .Params.filename }}" target="_blank">Download this essay</a></p>
-</section>
-{{- end -}}
+<script defer>
+	// enable citation-links
+	var citations = document.getElementsByClassName("citation");
+	for (var idx = 0; idx < citations.length; idx++) {
+		var citation = citations.item(idx);
 
+		citation.addEventListener("click", function () {
+			document.getElementById("ref-" + this.getAttribute("data-cites")).scrollIntoView();
+		});
+	}
+
+	// insert scroll spy
+	// source: https://webdesign.tutsplus.com/tutorials/reading-progress-bar-css-javascript--cms-36635
+	document.addEventListener('scroll', function () {
+		var docElem = document.documentElement;
+		var docBody = document.body;
+		var scrollTop = docElem['scrollTop'] || docBody['scrollTop'];
+		var scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight;
+		var scrollPercent = scrollTop / scrollBottom * 100 + '%';
+	
+		// console.log(scrollTop + ' / ' + scrollBottom + ' / ' + scrollPercent);
+	
+		document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
+	});
+</script>
 {{ end -}}

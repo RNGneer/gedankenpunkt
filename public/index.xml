@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Freimüller | Homepage on Michael Freimüller</title>
+    <link>https://mfreimueller.com/</link>
+    <description>Recent content in Michael Freimüller | Homepage on Michael Freimüller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright 2023 Michael Freimüller Released under Creative Commons Zero v1.0 Universal license</copyright>
+    <lastBuildDate>Thu, 06 Apr 2023 14:01:50 +0200</lastBuildDate><atom:link href="https://mfreimueller.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bio</title>
+      <link>https://mfreimueller.com/bio/</link>
+      <pubDate>Sat, 08 Apr 2023 15:03:50 +0200</pubDate>
+      
+      <guid>https://mfreimueller.com/bio/</guid>
+      <description>My name is Michael Freimüller. I am a philosophy undergraduate student at the University of Vienna.
+My primary research areas are ethics, media ethics, technology ethics and meta-ethics.
+Before studying philosophy, I worked as a software engineer for 5 years. The experience I gained during this time provides me with a unique viewpoint that allows me to grasp philosophical problems from a technicians point of view and conversely to look at problems with technology from a philosophical point of view.</description>
+    </item>
+    
+    <item>
+      <title>Future, Humans and Technology</title>
+      <link>https://mfreimueller.com/essays/futurehumansandtechnology/</link>
+      <pubDate>Thu, 06 Apr 2023 14:01:50 +0200</pubDate>
+      
+      <guid>https://mfreimueller.com/essays/futurehumansandtechnology/</guid>
+      <description>Should we have an optimistic or pessimistic outlook towards the future? In this essay I argue that we need to find a middle ground and learn from both perspectives.</description>
+    </item>
+    
+  </channel>
+</rss>

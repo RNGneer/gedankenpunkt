@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <meta name="author" content="Michael Freimüller">
+<meta name="description" content="The personal homepage of Michael Freimüller.">
+<meta name="keywords" content="ethics,technic ethics,essay,philosophy">
+<meta name="referrer" content="none-when-downgrade"><title>Bio - Michael Freimüller</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=arizonia:400|open-sans:300,400,400i" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="title">
+                <a href="https://mfreimueller.com/"><span class="title-first-letter">m</span>ichael <span class="title-first-letter">f</span>reimüller</a>
+            </h1>
+            <a href="/bio">Bio</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div id="progress-bar"></div>
+<section>
+	<div>
+		<h1>Bio</h1></div>
+</section>
+<section class="content">
+	<p>My name is Michael Freimüller. I am a philosophy undergraduate student at the University of Vienna.</p>
+<p>My primary research areas are ethics, media ethics, technology ethics and meta-ethics.</p>
+<p>Before studying philosophy, I worked as a software engineer for 5 years. The experience I gained during this time provides me with a
+unique viewpoint that allows me to grasp philosophical problems from a technicians point of view and conversely to look at problems
+with technology from a philosophical point of view.</p>
+<p>You can contact me by writing me an e-mail at michael [at] mfreimueller [dot] com.</p>
+<p>I decided to publish all essays on this site under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license,
+because I believe in free science and not hiding papers behind paywalls or restrictive licenses.</p>
+</section>
+<script defer>
+	
+	var citations = document.getElementsByClassName("citation");
+	for (var idx = 0; idx < citations.length; idx++) {
+		var citation = citations.item(idx);
+
+		citation.addEventListener("click", function () {
+			document.getElementById("ref-" + this.getAttribute("data-cites")).scrollIntoView();
+		});
+	}
+
+	
+	
+	document.addEventListener('scroll', function () {
+		var docElem = document.documentElement;
+		var docBody = document.body;
+		var scrollTop = docElem['scrollTop'] || docBody['scrollTop'];
+		var scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight;
+		var scrollPercent = scrollTop / scrollBottom * 100 + '%';
+	
+		
+	
+		document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
+	});
+</script>
+
+        </article>
+    </main>
+    <footer>
+        <p>Copyright 2023 Michael Freimüller. Released under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+        <p>Powered by <a href="https://gohugo.io/">Hugo</a></p>
+    </footer>
+</body>
+
+</html>
