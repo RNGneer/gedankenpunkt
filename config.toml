@@ -6,3 +6,7 @@ Copyright = 'Copyright 2023 Michael Freimüller Released under Creative Commons 
 [Params]
 author = 'Michael Freimüller'
 ShowThemeInfo = true
+
+[mediaTypes]
+[mediaTypes.'application/rss+xml']
+suffixes = ['xml']

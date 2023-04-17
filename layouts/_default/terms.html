@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<section>
+    <h1>{{ .Title }}</h1>
+</section>
+
+<section>
+    <ul class="article-list">
+        {{ range .Data.Terms.Alphabetical }}
+        <li class="article-link no-box">
+            <a class="capitalize" href="/tags/{{ .Name }}/">{{ .Name | title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+
+{{ end }}

@@ -1,15 +1,11 @@
 {{ define "main" -}}
 <section>
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .Title | title }}</h1>
 </section>
 <section>
   {{ .Content -}}
 </section>
-<section>
-  <ul class="article-list">
-    {{ range .Paginator.Pages -}}
-    {{ partial "list-item" . }}
-    {{ end -}}
-  </ul>
-</section>
+
+{{ partial "list" (dict "context" . "paginator" .Paginator.Pages ) }}
+
 {{ end }}

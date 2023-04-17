@@ -7,11 +7,7 @@
 <section>
   <h1>Latest essays</h1>
 
-  <ul class="article-list">
-    {{ range (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages -}}
-    {{ partial "list-item" . }}
-    {{ end -}}
-  </ul>
-  {{ template "_internal/pagination.html" . -}}
+  {{ partial "list" (dict "context" . "paginator" (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages ) }}
+
 </section>
 {{ end -}}

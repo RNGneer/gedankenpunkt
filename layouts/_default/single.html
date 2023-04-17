@@ -5,10 +5,22 @@
 		<h1>{{ .Title }}</h1>
 		{{- if not .Params.internal -}}
 		<p class="info">
-			<span>{{ .PublishDate.Format "January 2, 2006" }} by Michael Freimüller</span>
+			<span class="row">
+				<span>
+					<span class="bold">Tags: </span>
+
+					{{ range $i, $e := .Params.tags -}}
+						{{- if $i -}}, {{ end -}}
+						<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ $e | title }}</a>
+					{{- end -}}
+				</span>
+
+				<span>{{ .PublishDate.Format "January 2, 2006" }} by Michael Freimüller</span>
+			</span>
+
 			{{- if .Params.filename -}}
-			<span>
-				<a href="/pdf/{{ .Params.filename }}" target="_blank">Download PDF</a>
+			<span class="row">
+				<a href="/pdf/{{ .Params.filename }}" target="_blank">Download this essay as PDF</a>
 			</span>
 			{{- end -}}
 		</p>

@@ -5,15 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
     {{ partial "html-meta.html" . -}}
-    <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=arizonia:400|open-sans:300,400,400i" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=open-sans:300,400,400i" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `
-    <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
 </head>
 
 <body>
@@ -22,6 +18,7 @@
             <h1 class="title">
                 <a href="{{ .Site.BaseURL }}"><span class="title-first-letter">m</span>ichael <span class="title-first-letter">f</span>reimüller</a>
             </h1>
+            <a href="/essays">Essays</a>
             <a href="/bio">Bio</a>
         </nav>
     </header>
@@ -31,8 +28,22 @@
         </article>
     </main>
     <footer>
-        <p>Copyright 2023 Michael Freimüller. Released under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
-        <p>Powered by <a href="https://gohugo.io/">Hugo</a></p>
+        <div class="grid">
+            <p class="link-list">
+                <a class="mobile" href="/essays">Essays</a>
+                <a class="mobile" href="/bio">Bio</a>
+                <a href="/index.xml">RSS Feed</a>
+                <a href="/tags">All tags</a>
+            </p>
+            <p>
+                <span class="no-line-break">Copyright 2023</span> <span class="no-line-break">Michael Freimüller</span>.<br>
+                Released under <a class="no-line-break" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+            </p>
+            <p>
+                Powered by <a href="https://gohugo.io/">Hugo</a><br>
+                <a href="https://github.com/mfreimueller/Homepage">Source code</a>
+            </p>
+        </div>
     </footer>
 </body>
 

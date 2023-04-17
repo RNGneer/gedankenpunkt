@@ -28,6 +28,7 @@ article {
 	font-size: 20px;
 	max-width: 800px;
 	line-height: 26px;
+	width: 100%;
 }
 
 article h1:after {
@@ -40,16 +41,45 @@ article h1:after {
 	font-weight: 300;
 	font-size: 16px;
 	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.info .row {
+	display: flex;
 	justify-content: space-between;
 }
 
-footer {
+.bold {
+	font-weight: bold;
+}
+
+footer .grid {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	margin: 0 12px;
 	font-weight: 300;
 	font-size: 16px;
-	align-items: center;
+	justify-content: space-around;
+}
+
+.grid div,
+.grid p {
+	max-width: 30%;
+}
+
+.link-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.no-line-break {
+	white-space: nowrap;
+}
+
+.capitalize {
+	text-transform: capitalize;
 }
 
 footer:before {
@@ -126,6 +156,23 @@ h6 {
 .article-link {
 	display: flex;
 	flex-direction: column;
+	border: 1px solid black;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.article-link:hover {
+	box-shadow: 5px 10px #000;
+}
+
+.article-link.no-box {
+	border: unset;
+	padding: 0;
+	cursor: unset;
+}
+
+.article-link.no-box:hover {
+	box-shadow: unset;
 }
 
 .title {
@@ -142,11 +189,20 @@ section.content > p:first-of-type::first-letter {
 	padding: 6px 3px;
 	margin-right: 6px;
 	float: left;
-  }
+}
+
+
+.mobile {
+	display: none;
+}
 
 @media (max-width: 800px) {
 	nav > a {
 		display: none;
+	}
+
+	.mobile {
+		display: unset;
 	}
 
 	main {
@@ -156,5 +212,18 @@ section.content > p:first-of-type::first-letter {
 	.info {
 		flex-direction: column;
 		gap: 12px;
+	}
+
+	.article-list li {
+		margin: 16px;
+	}
+
+	footer .grid {
+		flex-direction: column;
+	}
+
+	.grid div,
+	.grid p {
+		max-width: unset;
 	}
 }
