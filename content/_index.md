@@ -4,7 +4,7 @@ date: 2023-04-06T14:01:50+02:00
 draft: false
 ---
 
-*Gedanken, Ideen, Kunst, Philosophie*
+*Gedanken, Ideen, Philosophie*
 
 Kontaktaufnahme via michael [at] mfreimueller [dot] com.
 

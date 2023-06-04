@@ -5,7 +5,7 @@
   </div>
 </section>
 <section>
-  <h1>Letzte Blogeinträge</h1>
+  <h1>Letzte Inhalte</h1>
 
   {{ partial "list" (dict "context" . "paginator" (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages ) }}
 
