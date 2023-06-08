@@ -7,8 +7,10 @@ internal: true
 
 Meine Name ist Michael Freimüller. Ich studiere zur Zeit Philosophie an der Universität Wien.
 
-Mein Fokus liegt auf den Themen Ethik, Freiheit und Individualität. Mein Denken geschieht unter dem Horizont von Existenzialismus und Stoizismus, und den Gedanken von Autoren wie Leo Tolstoi, Victor Hugo, Viktor Frankl und Ayn Rand. Diese Auswahl, sowie meine Interessen, ergeben sich aus meiner Auffassung, dass sich Philosophie zunächst am Menschen orientieren sollte. Lehnstuhlphilosophie ist ein netter Zeitvertreib, am Ende des Tages aber bloß "geschlossene Gesellschaft".
+Mein Fokus liegt auf den Themen Ethik, Freiheit und Individualität. Mein Denken geschieht unter dem Horizont von Existenzialismus und Stoizismus, und den Gedanken von Autoren wie Leo Tolstoi, Victor Hugo, Viktor Frankl und Ayn Rand. Diese Auswahl, sowie meine Interessen, ergeben sich aus meiner Auffassung, dass sich Philosophie zunächst am Menschen orientieren sollte.
+
+Ich blogge und veröffentliche Essays unter dem Pseudonym *Michael Eph*. "Eph" ist die Lautschrift des Anfangsbuchstabens meines Nachnamens. Unter [michaeleph.at](https://michaeleph.at) finden sich meine Schriften.
 
 Ich bin erreichbar via E-Mail: michael [at] mfreimueller [dot] com.
 
-Sämtliche Aufsätze auf dieser Webseite sind unter der  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) Lizenz veröffentlicht, da ich ein Verfechter von offener, transparenter Wissenschaft bin, die an der Wahrheit interessiert ist, und nicht am Profit.
+Ich veröffentliche sämtliche Aufsätze unter der  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) Lizenz.
