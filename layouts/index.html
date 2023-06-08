@@ -1,19 +1,9 @@
 {{ define "main" -}}
 <section style="margin-top: 1in;">
-  <div>
-    {{ .Content -}}
-  </div>
+  {{ .Content -}}
 </section>
 <section style="margin-top: 1in; margin-bottom: 1in;">
-	<ul class="article-list">
-        <li class="article-link" data-link="https://michaeleph.at">
-			<a href="https://michaeleph.at">Meine Schriften | Michael Eph</a>
-			<span class="summary" style="font-style: italic;">Gedanken, Ideen, Philosophie, Skizzen</span>
-		</li>
-        <li class="article-link" data-link="/bio">
-			<a href="/bio">Über mich</a>
-			<span class="summary">Ein kurzer, insignifikanter Abriss.</span>
-		</li>
-    </ul>
+	<h1>Letzte Inhalte</h1>
+	{{ partial "list" (dict "context" .) }}
 </section>
 {{ end -}}
