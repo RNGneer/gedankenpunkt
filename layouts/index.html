@@ -1,7 +1,16 @@
 {{ define "main" -}}
-<section style="margin-top: 1in;">
+<section style="margin-top: 1in; margin-bottom: 1in;">
   {{ .Content -}}
 </section>
+{{ range first 1 ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+{{ partial "articleMeta.html" . }}
+<section class="content">
+	{{ .Content | truncate 800 }}
+	<div style="margin-top: 0.5in; text-align: center;">
+		<a class="continue-read-btn" href="{{ .RelPermalink }}">Weiterlesen</a>
+	</div>
+</section>
+{{ end }}
 <section style="margin-top: 1in; margin-bottom: 1in;">
 	<h1>Letzte Inhalte</h1>
 	{{ partial "list" (dict "context" .) }}

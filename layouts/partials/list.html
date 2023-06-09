@@ -1,0 +1,25 @@
+<section>
+    <ul class="article-list">
+		{{ if .paginator }}
+			{{ range .paginator -}}
+				{{ partial "list-item" . }}
+        	{{ end -}}
+		{{ else }}
+			{{ range after 1 ( first 3 ( where site.RegularPages "Type" "in" site.Params.mainSections ) ) }}
+				{{ partial "list-item" . }}
+			{{ end }}
+		{{ end }}
+    </ul>
+</section>
+{{ template "_internal/pagination.html" .context -}}
+
+<script defer>
+    var articleLinks = document.getElementsByClassName("article-link");
+    for (var idx = 0; idx < articleLinks.length; idx++) {
+        var articleLink = articleLinks.item(idx);
+
+        articleLink.addEventListener("click", function () {
+            location.href = this.getAttribute("data-link", "_self");
+        });
+    }
+</script>

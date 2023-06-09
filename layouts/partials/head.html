@@ -1,0 +1,11 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    {{ partial "html-meta.html" . -}}
+    <title>{{ if not .IsHome }}{{ .Title | title }} - {{ end }}{{ .Site.Title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/custom.css" />
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=open-sans:300,400,400i" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
