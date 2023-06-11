@@ -7,7 +7,7 @@ theme = 'arete'
 [Params]
 author = 'Michael Freimüller'
 ShowThemeInfo = true
-mainSections = ['blog','essays']
+mainSections = ['blog','essays','archiv']
 
 [mediaTypes]
 [mediaTypes.'application/rss+xml']

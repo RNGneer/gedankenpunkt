@@ -1,15 +1,24 @@
-.continue-read-btn {
+.btn {
 	color: #000;
 	border: 1px solid #000;
-	padding: 8px;
+	padding: 12px;
 	text-align: center;
 }
 
-.continue-read-btn:visited {
+.btn.large {
+	padding: 12px 32px;
+}
+
+.btn:visited {
 	color: #000;
 }
 
-.continue-read-btn:hover {
+.btn:hover {
 	color: #fff;
 	background: #000;
+}
+
+.btn-list {
+	display: flex;
+	justify-content: space-evenly;
 }

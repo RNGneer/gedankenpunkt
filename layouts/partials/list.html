@@ -1,17 +1,16 @@
 <section>
     <ul class="article-list">
-		{{ if .paginator }}
-			{{ range .paginator -}}
-				{{ partial "list-item" . }}
-        	{{ end -}}
-		{{ else }}
-			{{ range after 1 ( first 3 ( where site.RegularPages "Type" "in" site.Params.mainSections ) ) }}
+		{{ if .homepage }}
+			{{ range after 1 ( first 4 ( where site.RegularPages "Type" "in" site.Params.mainSections ) ) }}
 				{{ partial "list-item" . }}
 			{{ end }}
+		{{ else }}
+			{{ range .context.Pages }}
+				{{ partial "list-item" . }}
+        	{{ end }}
 		{{ end }}
     </ul>
 </section>
-{{ template "_internal/pagination.html" .context -}}
 
 <script defer>
     var articleLinks = document.getElementsByClassName("article-link");
