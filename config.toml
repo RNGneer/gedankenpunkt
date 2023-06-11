@@ -1,5 +1,5 @@
 baseURL = 'https://mfreimueller.com/'
-languageCode = 'en-us'
+languageCode = 'de'
 title = 'Michael Freimüller'
 Copyright = 'Copyright 2023 Michael Freimüller Released under Creative Commons Zero v1.0 Universal license'
 theme = 'arete'
