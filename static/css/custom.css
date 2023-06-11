@@ -22,3 +22,42 @@
 	display: flex;
 	justify-content: space-evenly;
 }
+
+blockquote {
+	display: flex;
+	flex-direction: column;
+	font-weight: lighter;
+}
+
+blockquote.border {
+	border: 1px solid #000;
+	padding: 16px;
+}
+
+blockquote .middle {
+	align-self: center;
+}
+
+blockquote .right {
+	align-self: end;
+}
+
+@media (max-width: 800px) {
+	.btn-list {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	blockquote * {
+		text-align: center;
+		align-self: center;
+	}
+
+	blockquote .middle {
+		align-self: center;
+	}
+	
+	blockquote .right {
+		align-self: center;
+	}
+}

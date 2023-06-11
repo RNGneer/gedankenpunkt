@@ -1,6 +1,28 @@
 {{ define "main" -}}
 <section style="margin-top: 1in; margin-bottom: 1in;">
-  {{ .Content -}}
+	<blockquote>
+		<span>
+			"You have to decide who you are and force the world to deal with you, not with its idea of you."
+		</span>
+		<span class="right">
+			James Baldwin
+		</span>
+	</blockquote>
+
+	<blockquote class="border">
+		<span>
+			Wer bin ich?
+		</span>
+		<span class="middle">
+			Was ist mir der Andere?
+		</span>
+		<span class="right">
+			Warum handle ich?
+		</span>
+		<span>
+			Was ist Freiheit?
+		</span>
+	</blockquote>
 </section>
 {{ range first 1 ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
 {{ partial "articleMeta.html" . }}
