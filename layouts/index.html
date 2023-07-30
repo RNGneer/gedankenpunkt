@@ -1,45 +1,17 @@
-{{ define "main" -}}
-<section style="margin-top: 1in; margin-bottom: 1in;">
-	<blockquote>
-		<span>
-			"You have to decide who you are and force the world to deal with you, not with its idea of you."
-		</span>
-		<span class="right">
-			James Baldwin
-		</span>
-	</blockquote>
+<!DOCTYPE html>
+<html>
 
-	<blockquote class="border">
-		<span>
-			Wer bin ich?
-		</span>
-		<span class="middle">
-			Was ist mir der Andere?
-		</span>
-		<span class="right">
-			Warum handle ich?
-		</span>
-		<span>
-			Was ist Freiheit?
-		</span>
-	</blockquote>
-</section>
-{{ range first 1 ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
-{{ partial "articleMeta.html" . }}
-<section class="content">
-	{{ .Content | truncate 800 }}
-	<div style="margin-top: 0.5in; text-align: center;">
-		<a class="btn" href="{{ .RelPermalink }}">Weiterlesen</a>
-	</div>
-</section>
-{{ end }}
-<section style="margin-top: 1in; margin-bottom: 1in;">
-	<h1>Letzte Inhalte</h1>
-	{{ partial "list" (dict "context" . "homepage" 1) }}
-	<div class="btn-list" style="margin-top: 0.5in;">
-		<a class="large btn" href="/essays">Essays</a>
-		<a class="large btn" href="/blog">Blog</a>
-		<a class="large btn" href="/archiv">Archiv</a>
-	</div>
-</section>
-{{ end -}}
+{{ partial "head.html" . }}
+
+<body>
+	<header>
+		Michael Freimüller's persönlicher Blog
+	</header>
+    <main>
+        {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+			{{ partial "list-item" . }}
+		{{ end }}
+    </main>
+</body>
+
+</html>

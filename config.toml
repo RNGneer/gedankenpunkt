@@ -7,8 +7,13 @@ theme = 'arete'
 [Params]
 author = 'Michael Freimüller'
 ShowThemeInfo = true
-mainSections = ['blog','essays','archiv']
+mainSections = ['meme','post']
 
 [mediaTypes]
 [mediaTypes.'application/rss+xml']
 suffixes = ['xml']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

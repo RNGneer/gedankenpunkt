@@ -1,0 +1,18 @@
+<article>
+	{{ if (eq .Type "meme") }}
+	<div>
+		{{ .Content }}
+	</div>
+	{{ else if (eq .Type "post") }}
+	<div>
+		{{ .Content }}
+	</div>
+	{{ end }}
+
+	<div class="right date">
+		<small>~m, am {{ partial "date.html" (dict "date" .PublishDate "monate" $.Site.Data.months) }}</small>
+	</div>
+
+	<hr>
+
+</article>
