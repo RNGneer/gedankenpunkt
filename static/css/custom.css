@@ -1,5 +1,6 @@
 body {
 	background: #FFFFF0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -7,6 +8,37 @@ header {
 	padding: 8px 16px;
 	font-weight: lighter;
 	color: #535353;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+header * {
+	color: #535353 !important;
+}
+
+footer {
+	background-color: unset !important;
+	padding: 8px 16px;
+	font-weight: lighter;
+	color: #535353;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+footer::before {
+	content: unset;
+	display: unset;
+	border: unset;
+	width: unset;
+}
+
+article:not(:last-child) {
+	border-bottom: 1px dotted #535353;
+	margin-bottom:10px;
 }
 
 .btn {
@@ -21,12 +53,8 @@ hr {
 }
 
 article {
-	/* padding: 1in 16px; */
-
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
-	/* gap: 0.25in; */
 
 	font-size: unset !important;
 	line-height: unset !important;
@@ -46,6 +74,9 @@ article {
 
 .date {
 	color: #535353;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .quote {
@@ -99,6 +130,26 @@ blockquote .right {
 }
 
 @media (max-width: 800px) {
+	header {
+		flex-direction: column;
+		justify-content: unset;
+		align-items: center;
+		gap: 8px;
+	}
+
+	footer {
+		flex-direction: column;
+		justify-content: unset;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.date {
+		flex-direction: column;
+		justify-content: unset;
+		gap: 8px;
+	}
+
 	.btn-list {
 		flex-direction: column;
 		gap: 16px;

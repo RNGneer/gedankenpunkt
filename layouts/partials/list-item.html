@@ -9,10 +9,9 @@
 	</div>
 	{{ end }}
 
-	<div class="right date">
+	<div class="date">
+		<small>{{ .Title }} </small>
 		<small>~m, am {{ partial "date.html" (dict "date" .PublishDate "monate" $.Site.Data.months) }}</small>
 	</div>
-
-	<hr>
 
 </article>

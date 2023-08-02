@@ -1,7 +1,7 @@
-baseURL = 'https://mfreimueller.com/'
+baseURL = 'https://gedankenpunkt.com/'
 languageCode = 'de'
-title = 'Michael Freimüller'
-Copyright = 'Copyright 2023 Michael Freimüller Released under Creative Commons Zero v1.0 Universal license'
+title = 'Gedankenpunkt.'
+Copyright = 'Copyright © 2023 Michael Freimüller'
 theme = 'arete'
 
 [Params]

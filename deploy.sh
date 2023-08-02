@@ -2,4 +2,4 @@
 
 hugo
 
-rsync -ravuP public/ mf9501@sabic.uberspace.de:/home/mf9501/html
+rsync -ravuP public/ mf9501@sabic.uberspace.de:/var/www/virtual/mf9501/gedankenpunkt.com/

@@ -4,14 +4,13 @@
 {{ partial "head.html" . }}
 
 <body>
-	<header>
-		Michael Freimüller's persönlicher Blog
-	</header>
+	{{ partial "header.html" . }}
     <main>
         {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
 			{{ partial "list-item" . }}
 		{{ end }}
     </main>
+	{{ partial "footer.html" . }}
 </body>
 
 </html>
