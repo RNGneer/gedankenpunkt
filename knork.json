@@ -1,0 +1,6 @@
+{
+	"template": "hugo",
+	"variables": {
+		"path": "/var/www/virtual/mf9501/gedankenpunkt.com/"
+	}
+}
