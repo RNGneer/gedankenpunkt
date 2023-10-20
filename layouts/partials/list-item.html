@@ -1,13 +1,7 @@
 <article>
-	{{ if (eq .Type "meme") }}
 	<div>
 		{{ .Content }}
 	</div>
-	{{ else if (eq .Type "post") }}
-	<div>
-		{{ .Content }}
-	</div>
-	{{ end }}
 
 	<div class="date">
 		<small>{{ .Title }} </small>

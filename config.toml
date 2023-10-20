@@ -7,7 +7,7 @@ theme = 'arete'
 [Params]
 author = 'Michael Freimüller'
 ShowThemeInfo = true
-mainSections = ['meme','post']
+mainSections = ['aphorism','meme','post']
 
 [mediaTypes]
 [mediaTypes.'application/rss+xml']
